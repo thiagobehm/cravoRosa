@@ -12,45 +12,26 @@
 	<header class="text-center">
 		<?php include 'includes/menu.php'; ?>
 	</header>
-	
+
 	<section id="hero">
 		<div class="container-fluid text-center">
 			<div class="row">
 				<div class="col-xs-12">
-					<h1 id="heroText">Uma empresa especializada em planejamento, organização e produção de eventos.</h1>	
+					<h1 id="heroText">Uma empresa especializada em planejamento, organização e produção de eventos.</h1>
 				</div>
 			</div>
-		</div>				
+		</div>
 	</section>
 	<section id="servicos">
-		<!-- <div class="container text-center">
-			<h3 class="title">Serviços</h3>
-			<div class="row">
-				<div class="col-xs-12 col-md-6">
-					<ul>
-						<li>Festa de 15 anos</li>
-						<li>Presentes Personalizados</li>
-						<li>Corporativo</li>
-					</ul>
-				</div>
-				<div class="col-xs-12 col-md-6">
-					<ul>
-						<li>Aniversários</li>
-						<li>Festa Infantil</li>
-						<li>Bodas</li>
-					</ul>
-				</div>
-			</div>
-		</div> -->
 		<div class="container text-center">
 			<h3 class="title">Serviços</h3>
 			<div class="row">
 				<div class="col-sm-12 col-md-4">
-					<div class="flip-container well" id="serv15ANos">						
+					<div class="flip-container well" id="serv15ANos">
 						<div class="flipper" onclick="teste('#serv15ANos');">
 							<div class="front">
-								<!-- front content -->								
-								<img src="images/serv_15_anos.jpg" alt="15 anos" class="img-responsive"> 
+								<!-- front content -->
+								<img src="images/serv_15_anos.jpg" alt="15 anos" class="img-responsive">
 							</div>
 							<div class="back">
 								<!-- back content -->
@@ -69,7 +50,7 @@
 								<img src="images/serv_presentes.jpg" alt="Presente personalizado" class="img-responsive">
 							</div>
 							<div class="back">
-								<!-- back content -->								
+								<!-- back content -->
 								<div class="back-content">
 									Presentes Personalizados
 								</div>
@@ -88,7 +69,7 @@
 								<!-- back content -->
 								<div class="back-content">
 									Corporativo
-								</div>								
+								</div>
 							</div>
 						</div>
 					</div>
@@ -97,14 +78,14 @@
 					<div class="flip-container well" id="servAvniversario">
 						<div class="flipper" onclick="teste('#servAvniversario');">
 							<div class="front">
-								<!-- front content -->								
+								<!-- front content -->
 								<img src="images/serv_aniversario.jpg" alt="Aniversário" class="img-responsive">
 							</div>
 							<div class="back">
-								<!-- back content -->								
+								<!-- back content -->
 								<div class="back-content">
 									Aniversários
-								</div>	
+								</div>
 							</div>
 						</div>
 					</div>
@@ -120,7 +101,7 @@
 								<!-- back content -->
 								<div class="back-content">
 									Festa Infantil
-								</div>								
+								</div>
 							</div>
 						</div>
 					</div>
@@ -136,7 +117,7 @@
 								<!-- back content -->
 								<div class="back-content">
 									Bodas
-								</div>		
+								</div>
 							</div>
 						</div>
 					</div>
@@ -144,13 +125,13 @@
 			</div>
 
 		</div>
-	</section>	
+	</section>
 	<section id="diferencial">
 		<div class="container text-center">
 			<div class="row">
 				<h3 class="title">Nosso Diferencial</h3>
 				<!-- diferencial 1-->
-				<div class="col-xs-12 col-md-3">					
+				<div class="col-xs-12 col-md-3">
 					<div class="well">
 						<div class="well-body">
 							<img src="images/girl.png" alt="Garota sentada relaxando" class="img-responsive">
@@ -159,9 +140,9 @@
 							Cuidamos de tudo para você. Sem stress e preocupações.
 						</div>
 					</div>
-				</div>	
+				</div>
 				<!-- diferencial 2-->
-				<div class="col-xs-12 col-md-3">					
+				<div class="col-xs-12 col-md-3">
 					<div class="well">
 						<div class="well-body">
 							<img src="images/wedding-planner.png" alt="Planejamento" class="img-responsive">
@@ -170,9 +151,9 @@
 							Festas totalmente personalizadas conforme sua necessidade.
 						</div>
 					</div>
-				</div>	
+				</div>
 				<!-- diferencial 3-->
-				<div class="col-xs-12 col-md-3">					
+				<div class="col-xs-12 col-md-3">
 					<div class="well">
 						<div class="well-body">
 							<img src="images/support.png" alt="Suporte" class="img-responsive">
@@ -181,9 +162,9 @@
 							Conte com nosso apoio 24/07 em diferentes plataformas.
 						</div>
 					</div>
-				</div>	
+				</div>
 				<!-- diferencial 4-->
-				<div class="col-xs-12 col-md-3">					
+				<div class="col-xs-12 col-md-3">
 					<div class="well">
 						<div class="well-body">
 							<img src="images/denny.png" alt="Sem necessidade de parceiros" class="img-responsive">
@@ -192,7 +173,7 @@
 							Sem obrigações de contratação de parceiros.
 						</div>
 					</div>
-				</div>	
+				</div>
 
 			</div>
 		</div>
@@ -204,11 +185,10 @@
 
 	<script>
 		function teste(servico) {
-			$(document).ready(function () {				
-				$(servico).toggleClass("flip");				
+			$(document).ready(function () {
+				$(servico).toggleClass("flip");
 			});
 		}
 	</script>
 </body>
 </html>
-
