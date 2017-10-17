@@ -1,0 +1,531 @@
+header #logo{
+	margin: 30px 20px;	
+	display: inline-block;
+}
+
+/* ============ Global =========== */
+@font-face {
+    font-family: BackToBlack;
+    src: url('../fonts/BackToBlack.ttf');
+}
+
+form {
+	margin: 0 20px;
+}
+.space {
+	padding: 80px 30px 0;
+
+}
+
+.title{
+	font-family: BackToBlack;
+	font-size: 36px;
+	letter-spacing: 0.8px;
+	color: #b76767;
+	margin-bottom: 40px;
+}
+
+section{
+	margin: 30px 0;
+}
+
+.fa{
+	color: #b76767;
+}
+
+button span.fa {
+	color: #fff;
+}
+
+.btn-pink {
+	color: #B76767;
+    background-color: #ecbfbf;
+    border-color: #ffffff;
+    border-bottom: 2px solid #B76767;
+}
+
+.btn-pink:hover, .btn-pink:active,
+.btn-pink.active, .btn-pink:active:hover {
+	background-color: #B76767;
+	color: #fff;
+	font-weight: 600;
+}
+
+hr {
+	width: 80% ;
+	border: 1px solid #FBACAC ;
+	opacity: 0.2;
+}
+
+/* ====== Menu ========= */
+.navbar-default {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 18px;
+  background-color: #fbacac;    
+  display: -webkit-flex;
+  display: flex;  
+  margin-bottom: 0;  
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #fff;
+  background: transparent;
+  opacity: 0.6;
+  border-bottom: 3px solid #c67777;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  font-weight: 700;
+  border-bottom: 3px solid #c67777;
+}
+.navbar-default .navbar-nav > .disabled > a,
+.navbar-default .navbar-nav > .disabled > a:hover,
+.navbar-default .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: transparent;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: red;
+}
+
+/* ==== Hero Area ====== */
+
+#hero{
+	background: url('../images/hero-img.jpeg');
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0 -150px;
+	padding: 150px;
+	margin-top: 0;
+}
+
+#hero h1 {
+	font-family: BackToBlack;
+	font-size: 50px;
+	color: #fff;
+	text-shadow:  2px 3px 0 #b76767;
+}
+
+#hero h1::first-letter {
+	font-size: 70px;
+}
+
+/* ==== Servicos ====== */
+
+#servicos ul {
+	font-family: 'Oxygen', sans-serif;
+	font-size: 18px;
+	color: #7f7f7f;
+	letter-spacing: 0.1em;
+	line-height: 40px;
+	list-style-image: url('../images/rose.png');
+	display: inline-block;
+	text-align: left;	
+}
+
+#servicos ul li {
+	padding: 10px 20px;
+}
+
+
+#servicos .well {
+	padding: 0;
+	box-shadow: inset 2px 5px 73px #e96d6d;
+	box-shadow: 6px 6px 15px #808080;
+	margin-top: 20px; 
+}
+
+#servicos {
+	margin-bottom: 90px;
+}
+
+#servicos .img-responsive{
+	width: 100%;
+	height: 200px;
+}
+
+.flip-container {
+	perspective: 1000px;
+	backface-visibility: hidden;
+	padding: 0;
+	cursor: pointer;	
+}
+
+.flip-container.flip .back {
+	transition: 0.6s;
+	transform-style: preserve-3d;	
+	transform: rotateY(0deg);
+}
+
+.flip-container.flip .front {
+	transition: 0.6s;
+	transform-style: preserve-3d;	
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {	
+	width: 100%;
+	height: 100%;
+}
+
+
+/* hide back of pane during swap */
+.front, .back {
+	transition: 0.6s;
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+	position: absolute;
+	top: 0;
+	left: 0;	
+}
+
+/* front pane, placed above back */
+.front {
+	
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);	
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(-180deg);
+	position: relative;	
+	display: table;
+	padding: 0;		
+	font-family: 'Oxygen', sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	text-shadow: 2px 1px 5px #818181;
+	letter-spacing: 0.1em;
+	color: #fff;
+	width: 100%;
+	height: 200px;
+}
+
+.back-content {
+	margin: 0 auto;
+	display: table-cell;
+	vertical-align: middle;
+}
+/* ==== Diferencial ====== */
+
+section#diferencial {
+	background-color: #fbebeb;
+	padding: 40px 0;
+	margin: 0;
+}
+
+.well {
+  min-height: 20px;  
+  margin-bottom: 10px;
+  background-color: #fbacac;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.well-body {
+	padding: 19px;
+	display: inline-block;
+}
+
+.well-description {
+	font-family: 'Oxygen', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	background-color: #b76767;
+	padding: 19px;
+	margin: 0;
+	color: #fff;
+	display: block;
+}
+
+/* ==== Form ====== */
+
+label {
+	color: #B76767;
+}
+
+/*form RSVP */
+.align-form{
+	margin-left: -15px;
+}
+
+.form-field{
+	color: #B76767;
+	font-weight: bold;
+	border: none ;	
+	border-bottom: 1px solid #fbacac;
+	width: 100%;
+  	height: 34px;
+  	padding: 6px 12px;
+}
+
+input[type=text]:focus, input[type=email]:focus {
+	outline: 0;	
+}
+
+select:focus{
+	outline: 0;
+}
+
+select option {
+	font-weight: bold;
+    margin: 90px;
+    background: #fff;
+    color: : #fbacac;    
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+textarea {
+	color: #B76767;
+	font-weight: bold;
+	border: none ;	
+	border-bottom: 1px solid #fbacac;	
+	width: 100%;
+  	padding: 6px 12px;
+  	float: left;
+}
+
+textarea:focus{
+	outline: 0;
+}
+
+.input-group-addon {
+    padding: 6px 12px;
+    width: 40px !important;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #af7979;
+    text-align: center;
+    background-color: #ecbfbf;
+    border-bottom: 3px solid #d48a8a;
+    border-radius: 4px;
+}
+
+
+.form-field::-moz-placeholder, textarea::-moz-placeholder {
+  color: #fac7c7;
+  opacity: 1;
+}
+.form-field:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #fac7c7;
+}
+.form-field::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #fac7c7;
+}
+.form-field::-ms-expand, textarea::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
+/* ==== RSVP ====== */
+
+#RSVP p {
+	margin-bottom: 20px;
+}
+
+.text {	 
+    color: #7f7f7f;
+    font-size: 16px;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.6px;
+    line-height: 24px;
+}
+
+/* ==== Contato ====== */
+
+.contact-area{ 
+	background: url('../images/bg-contact.jpg');
+	background-repeat: no-repeat;	
+	background-size: cover;
+	background-position: 0;
+	padding: 40px;
+}
+
+#contato .well-description{
+	padding: 0;
+}
+
+#contato .well-body a {
+ 	color: #fff;
+ 	font-weight: 300;
+ 	font-size: 16px;
+ 	letter-spacing: 0.6px;
+ 	margin-left: 10px;
+}
+
+#contato .well-body a:hover{
+	text-decoration: none;
+	font-weight: 600;
+}
+
+/* ==== Footer ====== */
+
+footer .title {
+	font-size: 26px;
+}
+
+footer{
+	padding: 30px;	
+	background: #ECBFBF;
+}
+
+footer a{
+	margin-left: 5px;
+	color: #b76767;	
+}
+
+footer a:hover{
+	color: #924545;
+	margin-left: 8px;
+	text-decoration: none;
+}
+
+/* ==== Admin Area ====== */
+form#login{	
+	margin-top: 15%;
+	padding: 50px;
+	border: 1px solid #fbafaf;
+	border: 6px solid rgba(251, 175, 175, 0.3);
+	border-radius: 10px;
+}
+
+.login-logo {
+	margin-bottom: 50px;	
+}
+/* menu */
+.list-group-item {	
+    position: relative;
+    display: block;    
+    padding: 0;
+    margin-bottom: -1px;    
+    background: transparent;
+    border: none;
+    cursor: pointer;
+ }
+
+ .list-group-item span {
+ 	font-family: 'Oxygen', sans-serif;
+	font-size: 14px;
+	letter-spacing: 0.6px;
+	margin-left: 10px;	
+ }
+
+ .list-group-item:hover{
+ 	background: #337ab7;
+ 	color: white;
+ }
+
+ .list-group-item a {
+ 	text-decoration: none; 	
+ 	width: 100%;
+ 	height: 100%;
+ 	padding: 15px;
+ }
+#admin .input-group-addon {
+	padding: 0;
+}
+ .input-group-addon .btn.btn-danger{
+ 	text-decoration: none; 	
+ 	background: transparent;
+ 	border: none;
+ 	width: 100%;
+ 	height: 100%;
+ 	padding: 15px;
+ 	line-height: 0;
+ }
+
+aside {
+ background-color: #333439;
+ color: #fff;
+ height: 800px;
+ overflow:  auto;
+}
+
+aside .fa{
+	color: #fff !important;
+}
+
+.admin-logo{
+	margin: 30px 0;
+    width: 100%;
+}
+
+aside hr {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+main.panel {
+	background: #FFFFFF;
+	margin-top: 50px;
+}
+
+/* ==== Responsive ====== */
+
+@media (max-width: 991px) {
+	#servicos ul {
+		display: block;		
+		margin-left: 20%;		
+	}	
+}
+
+@media (max-width: 768px) {
+	#hero{
+		padding: 50px;		
+	}
+
+	#hero h1 {
+		font-size: 40px;
+	}
+	#hero h1::first-letter {
+		font-size: 50px;
+	}	
+	#contato .well {
+		margin: 50px 0;
+	}
+}
+
+@media (max-width: 600px) {
+	#hero{
+		padding: 20px;		
+		background-size: auto;
+		background-position: 0;
+	}
+
+	#hero h1 {
+		font-size: 30px;
+	}
+	#hero h1::first-letter {
+		font-size: 35px;
+	}
+}
