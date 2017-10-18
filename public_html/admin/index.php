@@ -36,7 +36,7 @@
 		</div>
 	</div>
 	<!-- load scripts -->
-	<?php include 'includes/scripts.php'; ?>
+	<?php include '../includes/scripts.php'; ?>
 
 </body>
 </html>
