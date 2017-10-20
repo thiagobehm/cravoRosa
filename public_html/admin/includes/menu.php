@@ -6,5 +6,5 @@
 	<hr>
 	<li class="list-group-item"><a href="" class="fa fa-gift"> <span>Presentes</span> </a> </li>
 	<hr>
-	<li class="list-group-item"><a href="" class="fa fa-user"> <span>Usuários</span> </a> </li>
+	<li class="list-group-item"><a href="" class="fa fa-user"> <span>Clientes</span> </a> </li>
 </ul>

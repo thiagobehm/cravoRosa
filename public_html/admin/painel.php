@@ -17,7 +17,7 @@
 			<main class="col-xs-9 col-md-9 col-lg-10">
 				<div class="header-bar">
 					<div class="header-user">
-						<ul class="nav navbar-nav navbar-right">								
+						<ul class="nav navbar-nav navbar-inverse navbar-right">								
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-user-circle fa-2x"></span> <b class="caret"></b></a>
 								<ul class="dropdown-menu">

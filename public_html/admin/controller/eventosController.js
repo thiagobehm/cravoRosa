@@ -27,6 +27,12 @@ app.controller('eventosCtrl', ['$scope', '$http', function($scope, $http) {
    * 
    * */
   $scope.submeter = function ($id) {
+
+    if ($scope.evento.nome === "") {
+      toastr.error('Nome do evento não pode ficar em branco!');
+      return;
+    }
+
     if ($scope.evento.id === -1) {
       $scope.cadastrarEvento();  
     } else {
@@ -50,7 +56,7 @@ app.controller('eventosCtrl', ['$scope', '$http', function($scope, $http) {
         $scope.listarEventos();
       })
       .error(function(data) {
-        alert("Falha de comunicação! Tente novamente mais tarde.");
+        toastr.error('Falha de comunicação! Tente novamente mais tarde.');        
       });      
   }
 
@@ -65,7 +71,7 @@ app.controller('eventosCtrl', ['$scope', '$http', function($scope, $http) {
         $scope.listarEventos();
       })
       .error(function() {
-        alert("Erro de conexão, tente novamente mais tarde.");
+        toastr.error('Erro de conexão, tente novamente mais tarde.');
       });
   }
 
@@ -94,7 +100,7 @@ app.controller('eventosCtrl', ['$scope', '$http', function($scope, $http) {
         $scope.listarEventos();
       })
       .error(function() {        
-        toastr.danger('Falha ao editar Evento, por favor tente novamente mais tarde!');
+        toastr.error('Falha ao editar Evento, por favor tente novamente mais tarde!');
       });
 
   }
@@ -110,7 +116,7 @@ app.controller('eventosCtrl', ['$scope', '$http', function($scope, $http) {
         $scope.evento = data.evento;
       })
       .error(function () {
-        alert("Falha ao buscar evento, por favor tente novamente mais tarde!");
+        toastr.error('Falha ao buscar evento, por favor tente novamente mais tarde.');
       });
   };
 
@@ -122,7 +128,7 @@ app.controller('eventosCtrl', ['$scope', '$http', function($scope, $http) {
         $scope.eventos = data.eventos;        
       })
       .error(function(data) {
-        toastr.danger('Falha ao carregar Eventos, por favor tente novamente mais tarde!');                
+        toastr.error('Falha ao carregar Eventos, por favor tente novamente mais tarde!');                
       });
   }
 

@@ -466,7 +466,18 @@ form#login {
   background: #fefefe;
   border: 1px solid #e1d5d5;
   z-index: 10;
+}
 
+.navbar-inverse .fa{
+  color: #fff;
+}
+
+li a.dropdown-toggle:hover, .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background: #4f4d4d;
+}
+
+.caret {
+  color: #fff;
 }
 
 /* menu */
@@ -579,6 +590,10 @@ main.col-xs-9, main.col-md-9, main.col-lg-10{
   .header-bar {
     height: 50px;
     margin-top: -10px;
+  }
+
+  .header-user {
+    padding: 0 15px;
   }
 }
 
