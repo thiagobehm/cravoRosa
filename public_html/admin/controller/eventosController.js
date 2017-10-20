@@ -6,6 +6,37 @@ app.controller('eventosCtrl', ['$scope', '$http', function($scope, $http) {
   $scope.eventos = [];
 
   /**
+   * evento para verificar quando usuário pressiona enter e submete form para novo cadastro ou edição do evento
+   */
+  $(document).ready(function () {
+      $('#nomeEvento').on('keypress', function (e) {        
+        if (e.which === 13) {
+          $scope.submeter();
+        }
+      });
+    });
+
+  $scope.abrirCadastro = function () {
+    $scope.evento = $scope.objEvento();
+    $('#myModal').modal('show');
+  }
+
+  /**
+   * Decide se vai cadastrar um novo evento ou editar um já cadastrado
+   * @param  {int} $id id usado para edição do evento 
+   * 
+   * */
+  $scope.submeter = function ($id) {
+    if ($scope.evento.id === -1) {
+      $scope.cadastrarEvento();  
+    } else {
+      $scope.updateEvento($id);
+    }
+
+    $('#myModal').modal('hide');
+  }
+
+  /**
    * cadastra novo evento no banco
    * @return {[type]}
    */
@@ -49,7 +80,7 @@ app.controller('eventosCtrl', ['$scope', '$http', function($scope, $http) {
     }, 1000)
     
   }
-
+  
   /**
    * realiza edição dos dados no banco
    */
