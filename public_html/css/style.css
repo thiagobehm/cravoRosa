@@ -27,6 +27,10 @@ form {
   margin-bottom: 40px;
 }
 
+.sub-title {
+  color: #b76767;
+}
+
 section {
   margin: 30px 0;
 }
@@ -281,6 +285,10 @@ label {
   color: #B76767;
 }
 
+.form-errorMSG {
+  margin-left: 40px;
+}
+
 
 /*form RSVP */
 
@@ -446,6 +454,16 @@ form#login {
   margin-bottom: 50px;
 }
 
+.helpLinks a {
+  color:  #B76767;
+  margin:  5px 0;
+  line-height: 25px;
+}
+
+.helpLinks {
+  margin-bottom: 15px;
+}
+
 .header-bar {
   background:  #fefefe;
   background: -moz-linear-gradient(top, rgba(224,224,224,1) 0%, rgba(245,245,245,1) 61%, rgba(245,245,245,1) 100%);
@@ -494,7 +512,7 @@ li a.dropdown-toggle:hover, .nav .open > a, .nav .open > a:hover, .nav .open > a
 
 .list-group-item span {
   font-family: 'Oxygen', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.2px;
   margin-left: 10px;
   display: block;

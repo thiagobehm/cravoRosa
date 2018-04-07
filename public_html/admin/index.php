@@ -8,28 +8,35 @@
 	<title>Cravo Rosa Eventos - Admin</title>
 	<?php include 'includes/header.php'; ?>
 </head>
-<body>
-	<div class="container" >
+<body ng-app="myApp">
+	<div class="container" ng-controller="loginCtrl">
 		<div class="row">
-			<div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4">
+			<div class="col-xs-12 col-md-8 col-md-offset-2">
 				<form action="" method="post" class="form-horizontal" id="login">	
 					<div class="login-logo">
 						<img src="../images/logo.png" alt="Logo" class="img-responsive">			
 					</div>	
+					<div class="alert alert-danger text-center" ng-show='hasError'>
+						<strong>Opps!</strong> {{hasError.message}}
+					</div>
 					<div class="form-group">							
 						<div class="col-xs-12 input-group">
 							<span class="input-group-addon"><i class="fa fa-user"></i></span>
-							<input type="text" class="form-field" name="nome" placeholder="Seu Login">
+							<input type="email" class="form-field" name="email" ng-model='usuario.email' placeholder="Seu Email">
 						</div>
 					</div>
 					<div class="form-group">							
 						<div class="col-xs-12 input-group">
 							<span class="input-group-addon"><i class="fa fa-key"></i></span>
-							<input type="password" class="form-field" name="senha" placeholder="Senha...">
+							<input type="password" class="form-field" name="senha" ng-model='usuario.password' placeholder="Senha...">
 						</div>
 					</div>
+					<div class="helpLinks text-center">
+						<a href="cadastrarUser.php">Cadastrar novo Usuário?</a> <br>
+						<a href="">Esqueceu sua senha?</a>
+					</div>
 					<div class="text-center">
-						<button type="button" class="btn btn-danger">Entrar</button>
+						<button type="button" class="btn btn-danger" ng-click='autenticarUsuario()'>Entrar</button>
 					</div>
 				</form>
 			</div>
@@ -37,7 +44,7 @@
 	</div>
 	<!-- load scripts -->
 	<?php include '../includes/scripts.php'; ?>
-
+	<script src="controller/loginController.js"></script>
 </body>
 </html>
 
