@@ -1,4 +1,4 @@
-var app = angular.module('myApp', []);
+
 
 app.controller('loginCtrl', ['$scope', '$http', function($scope, $http) {
 
@@ -14,24 +14,13 @@ app.controller('loginCtrl', ['$scope', '$http', function($scope, $http) {
       });
     });
 
-  $scope.listarUsuarios = function () {
-    $http
-      .get('http://localhost/api/listarUsuarios')
-      .success(function (data) {
-        $scope.usuarios = data.usuarios;
-        $scope.usuario = $scope.objLogin();
-      })
-      .error(function () {
-        toastr.error('Falha de comunicação! Tente novamente mais tarde.');        
-      });
-  }
 
   $scope.autenticarUsuario = function () {
     $http
       .post('http://localhost/api/login', $scope.usuario)
       .success(function (data) { 
         if (data.logado) {
-          window.location = 'painel.php';
+          window.location = 'eventos.php';
         } else {
           $scope.hasError = {
             error: true,
@@ -43,6 +32,17 @@ app.controller('loginCtrl', ['$scope', '$http', function($scope, $http) {
         toastr.error('Falha de comunicação! Tente novamente mais tarde.'); 
       });
 
+  }
+
+  $scope.logout = function () {
+    $http
+      .post('http://localhost/api/logout')
+      .success(() => {
+        window.location = 'index.php';
+      })
+      .error(() => {
+        toastr.error('Falha de comunicação! Tente novamente mais tarde.'); 
+      });
   }
   
   $scope.objLogin = function() {

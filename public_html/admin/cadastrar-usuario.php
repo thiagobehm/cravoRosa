@@ -20,25 +20,25 @@
 					<div class="form-group">							
 						<div class="col-xs-12 input-group">
 							<span class="input-group-addon"><i class="fa fa-user"></i></span>
-							<input type="text" class="form-field" name="nome" placeholder="Nome" ng-model="user.nome" required="required">
+							<input type="text" class="form-field" name="nome" required="required" placeholder="Nome" ng-model="user.nome" required="required">
 						</div>
 					</div>
 					<div class="form-group">							
 						<div class="col-xs-12 input-group">
 							<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-							<input type="email" class="form-field" name="email" placeholder="Email..." ng-model="user.email">
+							<input type="email" class="form-field" required="required" name="email" placeholder="Email..." ng-model="user.email">
 						</div>
 					</div>
 					<div class="form-group">							
 						<div class="col-xs-12 input-group">
 							<span class="input-group-addon"><i class="fa fa-key"></i></span>
-							<input type="password" class="form-field" name="senha" id="senha" placeholder="Senha..." ng-model="user.password">
+							<input type="password" class="form-field" required="required" name="senha" id="senha" placeholder="Senha..." ng-model="user.password">
 						</div>
 					</div>
 					<div class="form-group">							
 						<div class="col-xs-12 input-group">
 							<span class="input-group-addon"><i class="fa fa-key"></i></span>
-							<input type="password" class="form-field" name="senhaConfirmacao" id="senhaConfirmacao" placeholder="Confirme sua senha..." ng-model="user.senhaConfirmacao" ng-keyup="validarSenha()">							
+							<input type="password" class="form-field" required="required" name="senhaConfirmacao" id="senhaConfirmacao" placeholder="Confirme sua senha..." ng-model="user.senhaConfirmacao" ng-keyup="validarSenha()">							
 						</div>
 						<span ng-show="hasError.error" class="text-danger form-errorMSG">{{hasError.message}} </span>
 					</div>
@@ -51,7 +51,8 @@
 	</div>
 	<!-- load scripts -->
 	<?php include '../includes/scripts.php'; ?>
-	<script src="controller/cadastrarUserController.js"></script>
+	<script src="controller/app.js"></script>
+	<script src="controller/userController.js"></script>
 </body>
 </html>
 

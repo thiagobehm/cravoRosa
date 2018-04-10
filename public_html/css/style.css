@@ -299,11 +299,12 @@ label {
 .form-field {
   color: #B76767;
   font-weight: bold;
-  border: none;
-  border-bottom: 1px solid #fbacac;
+  border: none !important;
+  border-bottom: 1px solid #fbacac !important;
   width: 100%;
   height: 34px;
-  padding: 6px 12px;
+  padding: 6px 12px !important;
+  box-shadow:  none!important;
 }
 
 input[type=text]:focus, input[type=email]:focus {
@@ -439,6 +440,17 @@ footer a:hover {
   text-decoration: none;
 }
 
+/* ==== Modal Area ====== */
+.modal.fade  {
+  margin-top: 10%;
+}
+.modal-backdrop {
+  z-index: 5;
+}
+
+.modal .input-group-addon {
+  padding: 0;
+}
 
 /* ==== Admin Area ====== */
 
@@ -499,6 +511,12 @@ li a.dropdown-toggle:hover, .nav .open > a, .nav .open > a:hover, .nav .open > a
 }
 
 /* menu */
+
+.ls-active, .ls-active a {
+  background: #323232;
+  color: #fff !important;
+  font-weight: bolder !important;
+}
 
 .list-group-item {
   position: relative;

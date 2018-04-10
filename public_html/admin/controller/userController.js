@@ -1,4 +1,4 @@
-var app = angular.module('myApp', []);
+
 
 app.controller('userCtrl', ['$scope', '$http', function ($scope, $http) {
 	$scope.user = {};
@@ -46,7 +46,38 @@ app.controller('userCtrl', ['$scope', '$http', function ($scope, $http) {
       });      
   }
 
+  $scope.atualizarDados = function () {
+    console.log($scope.user.nome);
+    if ($scope.user.email === undefined || $scope.user.nome === undefined) {
+       toastr.error('Os campos não podem ficar em branco!');
+       return;        
+    } else {
+      //edit the values on the db
+      $http
+        .post('http://localhost/api/editarUsuario/' + $scope.user.idusuarios, $scope.user)
+        .success((data) => {
+          toastr.success('Dados atualizados com sucesso!');  
+        })
+        .error(() => {
+          toastr.error('Falha de comunicação! Tente novamente mais tarde.');
+        });
+    }
+
+  }
+
+  $scope.buscarUsuario = function (email) {
+    $http
+      .get('http://localhost/api/buscarUsuario/' + email)
+      .success((data) => {
+        $scope.user = data.user;
+      })
+      .error(() => {
+        toastr.error('Falha de comunicação! Tente novamente mais tarde.');        
+      });
+  }
+
   $scope.ObjUser = {
+    idusuarios: -1,
   	nome: '',
   	email: '',
   	senha: ''

@@ -21,7 +21,7 @@
 					</div>
 					<div class="form-group">							
 						<div class="col-xs-12 input-group">
-							<span class="input-group-addon"><i class="fa fa-user"></i></span>
+							<span class="input-group-addon"><i class="fa fa-envelope-open"></i></span>
 							<input type="email" class="form-field" name="email" ng-model='usuario.email' placeholder="Seu Email">
 						</div>
 					</div>
@@ -32,7 +32,7 @@
 						</div>
 					</div>
 					<div class="helpLinks text-center">
-						<a href="cadastrarUser.php">Cadastrar novo Usuário?</a> <br>
+						<a href="cadastrar-usuario.php">Cadastrar novo Usuário?</a> <br>
 						<a href="">Esqueceu sua senha?</a>
 					</div>
 					<div class="text-center">
@@ -44,6 +44,7 @@
 	</div>
 	<!-- load scripts -->
 	<?php include '../includes/scripts.php'; ?>
+	<script src="controller/app.js"></script>
 	<script src="controller/loginController.js"></script>
 </body>
 </html>

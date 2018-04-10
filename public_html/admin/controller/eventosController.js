@@ -1,4 +1,4 @@
-var app = angular.module('myApp', []);
+
 
 app.controller('eventosCtrl', ['$scope', '$http', function($scope, $http) {
   $scope.showCadastroEventos = false;
@@ -14,6 +14,13 @@ app.controller('eventosCtrl', ['$scope', '$http', function($scope, $http) {
           $scope.submeter();
         }
       });
+
+      $('body').on('keypress', function (e) {
+        if (e.which === 99) {
+          $scope.evento = $scope.objEvento();
+          $('#myModal').modal('show');
+        }
+      })
     });
 
   $scope.abrirCadastro = function () {
